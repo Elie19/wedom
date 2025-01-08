@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/Wallet Setup.dart';
+import '../widgets/wallet_setup.dart';
 
 class profilepage extends StatelessWidget {
   @override
