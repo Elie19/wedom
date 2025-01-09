@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-
 class ProfilePage extends StatelessWidget {
   final String userId = 'WeDOM-12345';
 
@@ -20,10 +19,14 @@ class ProfilePage extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            QrImage(
-              data: userId,
-              version: QrVersions.auto,
-              size: 200.0,
+            // Le widget QrImage
+            SizedBox(
+              width: 200,
+              height: 200,
+              child: QrImage(
+                data: userId,
+                version: QrVersions.auto,
+              ),
             ),
             const SizedBox(height: 20),
             ElevatedButton(

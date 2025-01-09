@@ -1,0 +1,41 @@
+wedom/
+├── android/                      # Configuration Android pour l'application
+├── ios/                          # Configuration iOS pour l'application
+├── lib/                          # Dossier principal contenant le code Dart
+│   ├── main.dart                 # Point d'entrée principal de l'application
+│   ├── pages/                    # Contient toutes les pages de l'application
+│   │   ├── landing_page.dart     # Page d'accueil avec introduction
+│   │   ├── home_page.dart        # Page principale avec les services
+│   │   ├── profile_page.dart     # Page de profil utilisateur
+│   │   ├── wallet_setup_page.dart # Page de configuration du portefeuille
+│   │   ├── details_page.dart     # Page pour les détails des services
+│   ├── widgets/                  # Composants réutilisables pour l'UI
+│   │   ├── custom_button.dart    # Bouton personnalisé utilisé dans l'app
+│   │   ├── carousel_widget.dart  # Widget pour le carrousel
+│   │   ├── analytics_chart.dart  # Widget pour les graphiques d'analyse
+│   │   ├── header_widget.dart    # En-tête réutilisable
+│   ├── models/                   # Modèles de données
+│   │   ├── service_model.dart    # Modèle pour représenter un service
+│   │   ├── user_model.dart       # Modèle pour les données utilisateur
+│   ├── services/                 # Dossier pour la logique métier et les API
+│   │   ├── api_service.dart      # Service pour les appels API
+│   │   ├── wallet_service.dart   # Service pour la gestion des portefeuilles
+│   ├── utils/                    # Utilitaires pour l'application
+│   │   ├── constants.dart        # Constantes utilisées dans l'application
+│   │   ├── themes.dart           # Thèmes et styles globaux
+│   │   ├── validators.dart       # Fonctions de validation (ex : adresses de portefeuille)
+│   ├── routes.dart               # Gestion des routes de navigation
+├── assets/                       # Contient les fichiers multimédias
+│   ├── images/                   # Images utilisées dans l'application
+│   │   ├── wallet.png            # Image de portefeuille
+│   │   ├── crypto_card.png       # Carte pour la crypto
+│   │   ├── charts/               # Graphiques statiques
+│   ├── icons/                    # Icônes personnalisées
+│   │   ├── star_icon.svg         # Icône pour les favoris
+│   │   ├── wallet_icon.svg       # Icône pour les portefeuilles
+│   ├── fonts/                    # Polices personnalisées
+│       ├── OpenSans-Regular.ttf  # Exemple de police utilisée
+├── pubspec.yaml                  # Dépendances et configurations du projet
+├── test/                         # Tests unitaires et widgets
+│   ├── widget_test.dart          # Tests pour les widgets
+
