@@ -5,7 +5,7 @@ wedom/
 │   ├── main.dart                 # Point d'entrée principal de l'application
 │   ├── pages/                    # Contient toutes les pages de l'application
 │   │   ├── landing_page.dart     # Page d'accueil avec introduction
-│   │   ├── home_page.dart        # Page principale avec les services
+│   │   ├── dashboard_page.dart        # Page principale avec les services
 │   │   ├── profile_page.dart     # Page de profil utilisateur
 │   │   ├── wallet_setup_page.dart # Page de configuration du portefeuille
 │   │   ├── details_page.dart     # Page pour les détails des services
