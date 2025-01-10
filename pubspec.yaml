@@ -32,6 +32,8 @@ dependencies:
     sdk: flutter
   carousel_slider: ^4.0.0
   qr_flutter: ^4.0.0
+  fl_chart: ^0.70.1 # Pour les graphiques
+  provider: ^6.0.5 # Pour la gestion de l'état
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8

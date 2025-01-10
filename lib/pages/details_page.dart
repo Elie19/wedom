@@ -48,7 +48,7 @@ class DetailsPage extends StatelessWidget {
                         FlSpot(4, 3.2),
                       ],
                       isCurved: true,
-                      colors: [Colors.yellow],
+                      color: Colors.yellow,
                       barWidth: 3,
                     ),
                     LineChartBarData(
@@ -60,7 +60,7 @@ class DetailsPage extends StatelessWidget {
                         FlSpot(4, 3),
                       ],
                       isCurved: true,
-                      colors: [Colors.brown],
+                      color: Colors.brown,
                       barWidth: 3,
                     ),
                   ],

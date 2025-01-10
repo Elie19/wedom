@@ -26,7 +26,7 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        primary: color,
+        backgroundColor: color,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius),
         ),
@@ -101,15 +101,18 @@ class AnalyticsChart extends StatelessWidget {
             LineChartData(
               gridData: FlGridData(show: false),
               titlesData: FlTitlesData(
-                leftTitles: SideTitles(showTitles: true),
-                bottomTitles: SideTitles(showTitles: true),
+                leftTitles: AxisTitles(
+                    sideTitles: SideTitles(showTitles: true)),
+                bottomTitles: AxisTitles(
+                    sideTitles: SideTitles(showTitles: true)
+                ),
               ),
               borderData: FlBorderData(show: true),
               lineBarsData: [
                 LineChartBarData(
                   spots: data,
                   isCurved: true,
-                  colors: [lineColor],
+                  color: lineColor,
                   barWidth: 3,
                   isStrokeCapRound: true,
                   dotData: FlDotData(show: false),
