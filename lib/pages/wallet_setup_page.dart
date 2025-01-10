@@ -5,151 +5,157 @@ class WalletSetupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Wallet Setup'),
-        backgroundColor: Colors.blueAccent,
+        title: Text('Best transactions fees'),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 0,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.notifications_none),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.person_outline),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
-            Center(
-              child: Container(
-                padding: EdgeInsets.all(16.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.3),
-                      blurRadius: 10.0,
-                      offset: Offset(0, 5),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        labelText: 'Paste wallet address',
-                        border: OutlineInputBorder(),
-                        suffixIcon: Icon(Icons.qr_code_scanner),
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    ElevatedButton(
-                      onPressed: () {
-                        // Handle Generate ID logic
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueAccent,
-                        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                      ),
-                      child: Text(
-                        'Generate and ID',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(height: 40),
-            Divider(),
             Text(
-              'Last Tasks to Do',
+              'Lowest to Highest',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            ListTile(
-              title: Text('Talk with Richard about new JS Framework'),
-              subtitle: Text('Today - 11:45 - 12:45'),
-              trailing: Icon(Icons.important_devices, color: Colors.green),
-            ),
-            Divider(),
-            SizedBox(height: 20),
-            Text(
-              'To Pay (3)',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+            SizedBox(height: 10),
+            Expanded(
+              child: ListView(
+                children: [
+                  TransactionTile(
+                    title: 'Yellow Card',
+                    subtitle: 'ACHAT',
+                    percentage: 67,
+                    amount: 'XOF 636',
+                    token: 'USDT-BEP20',
+                  ),
+                  TransactionTile(
+                    title: 'Izichange',
+                    subtitle: 'ACHAT',
+                    percentage: 53,
+                    amount: 'XOF 650',
+                    token: 'USDT-BEP20',
+                  ),
+                  TransactionTile(
+                    title: 'Digital Cash',
+                    subtitle: 'ACHAT',
+                    percentage: 50,
+                    amount: 'XOF 732',
+                    token: 'USDT-BEP20',
+                  ),
+                  Divider(),
+                  TransactionTile(
+                    title: 'Digital Cash',
+                    subtitle: 'VENTE',
+                    percentage: 67,
+                    amount: 'XOF 546',
+                    token: 'USDT-BEP20',
+                  ),
+                  TransactionTile(
+                    title: 'Izichange',
+                    subtitle: 'VENTE',
+                    percentage: 53,
+                    amount: 'XOF 580',
+                    token: 'USDT-BEP20',
+                  ),
+                  TransactionTile(
+                    title: 'Yellow Card',
+                    subtitle: 'VENTE',
+                    percentage: 50,
+                    amount: 'XOF 615',
+                    token: 'USDT-BEP20',
+                  ),
+                ],
               ),
-            ),
-            Wrap(
-              spacing: 10,
-              children: [
-                Chip(
-                  label: Text('GNote'),
-                  backgroundColor: Colors.blue.shade50,
-                ),
-                Chip(
-                  label: Text('Office'),
-                  backgroundColor: Colors.blue.shade50,
-                ),
-                Chip(
-                  label: Text('FCloud'),
-                  backgroundColor: Colors.blue.shade50,
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: [
-                    Text(
-                      '79%',
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blueAccent,
-                      ),
-                    ),
-                    Text('last year'),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text(
-                      '239%',
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blueAccent,
-                      ),
-                    ),
-                    Text('of 5 years'),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text(
-                      '+17',
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blueAccent,
-                      ),
-                    ),
-                    Text('mon to mon'),
-                  ],
-                ),
-              ],
             ),
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.swap_horiz),
+            label: 'Transactions',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star),
+            label: 'Favorites',
+          ),
+        ],
+        currentIndex: 1,
+        selectedItemColor: Colors.blueAccent,
+        onTap: (index) {
+          // Handle navigation
+        },
+      ),
+    );
+  }
+}
+
+class TransactionTile extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  final int percentage;
+  final String amount;
+  final String token;
+
+  const TransactionTile({
+    required this.title,
+    required this.subtitle,
+    required this.percentage,
+    required this.amount,
+    required this.token,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: CircleAvatar(
+        child: Text('$percentage%'),
+        backgroundColor: Colors.blueAccent,
+        foregroundColor: Colors.white,
+      ),
+      title: Text(title),
+      subtitle: Text(subtitle),
+      trailing: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            amount,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            token,
+            style: TextStyle(
+              color: Colors.grey,
+            ),
+          ),
+        ],
+      ),
+      onTap: () {
+        // Handle transaction details
+      },
     );
   }
 }
