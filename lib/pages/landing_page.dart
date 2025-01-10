@@ -8,7 +8,7 @@ class LandingPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/wallets.png', height: 200),
+            Image.asset("assets/images/wallets.png", height: 200),
             const SizedBox(height: 20),
             const Text(
               'Buy, sell & trade more efficiently',
@@ -24,7 +24,7 @@ class LandingPage extends StatelessWidget {
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/dashboard');
+                Navigator.pushNamed(context, '/home');
               },
               child: const Text('Get Started'),
             ),

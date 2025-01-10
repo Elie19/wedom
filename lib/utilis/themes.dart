@@ -5,57 +5,13 @@ class AppThemes {
     colorScheme: ColorScheme.light(
       primary: Colors.blue,
       secondary: Colors.blueAccent,
-      background: Colors.white,
+      background: Colors.white, // Couleur de fond globale
     ),
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: Colors.white, // Couleur de fond des pages
     appBarTheme: AppBarTheme(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.white, // Couleur de l'AppBar
       foregroundColor: Colors.black,
       elevation: 0,
-      titleTextStyle: TextStyle(
-        color: Colors.black,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
-      iconTheme: IconThemeData(color: Colors.black),
-    ),
-    textTheme: TextTheme(
-      displayLarge: TextStyle(
-        fontSize: 32,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
-      ),
-      displayMedium: TextStyle(
-        fontSize: 28,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
-      ),
-      bodyLarge: TextStyle(
-        fontSize: 16,
-        color: Colors.black,
-      ),
-      bodyMedium: TextStyle(
-        fontSize: 14,
-        color: Colors.black54,
-      ),
-    ),
-    buttonTheme: ButtonThemeData(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.0),
-      ),
-      buttonColor: Colors.blue,
-      textTheme: ButtonTextTheme.primary,
-    ),
-    inputDecorationTheme: InputDecorationTheme(
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8.0),
-        borderSide: BorderSide(color: Colors.grey),
-      ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8.0),
-        borderSide: BorderSide(color: Colors.blue),
-      ),
-      hintStyle: TextStyle(color: Colors.grey),
     ),
   );
 
@@ -70,50 +26,6 @@ class AppThemes {
       backgroundColor: Colors.grey[900],
       foregroundColor: Colors.white,
       elevation: 0,
-      titleTextStyle: TextStyle(
-        color: Colors.white,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
-      iconTheme: IconThemeData(color: Colors.white),
-    ),
-    textTheme: TextTheme(
-      displayLarge: TextStyle(
-        fontSize: 32,
-        fontWeight: FontWeight.bold,
-        color: Colors.white,
-      ),
-      displayMedium: TextStyle(
-        fontSize: 28,
-        fontWeight: FontWeight.bold,
-        color: Colors.white,
-      ),
-      bodyLarge: TextStyle(
-        fontSize: 16,
-        color: Colors.white,
-      ),
-      bodyMedium: TextStyle(
-        fontSize: 14,
-        color: Colors.white70,
-      ),
-    ),
-    buttonTheme: ButtonThemeData(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.0),
-      ),
-      buttonColor: Colors.blue,
-      textTheme: ButtonTextTheme.primary,
-    ),
-    inputDecorationTheme: InputDecorationTheme(
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8.0),
-        borderSide: BorderSide(color: Colors.grey),
-      ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8.0),
-        borderSide: BorderSide(color: Colors.blue),
-      ),
-      hintStyle: TextStyle(color: Colors.grey),
     ),
   );
 }
