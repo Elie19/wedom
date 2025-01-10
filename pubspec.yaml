@@ -13,7 +13,7 @@ dependencies:
   http: ^1.2.2 # For API requests
   fl_chart: ^0.70.1 # For charts
   provider: ^6.0.5 # For state management
-  carousel_slider: ^4.0.0 # For carousels
+  carousel_slider: ^5.0.0 # For carousels
   qr_flutter: ^4.0.0 # For QR code generation
 
 dev_dependencies:
@@ -27,12 +27,12 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - assets/polices
+    - assets/polices/
 
   # Fonts
   fonts:
     - family: OpenSans
       fonts:
-        - asset: assets/fonts/OpenSans-Regular.ttf
-        - asset: assets/fonts/OpenSans-Bold.ttf
+        - asset: assets/polices/OpenSans-Bold.ttf
+        - asset: assets/polices/OpenSans-SemiBold.ttf
           weight: 700
